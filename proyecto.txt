@@ -1,0 +1,35 @@
+animales-java/
+├── Dockerfile
+├── docker-compose.yml
+├── pom.xml
+├── README.md
+│
+├── src/
+│   ├── main/
+│   │   ├── java/com/animales/
+│   │   │   ├── Main.java                    # Clase principal
+│   │   │   │
+│   │   │   ├── model/                       # Modelos (clases POO)
+│   │   │   │   ├── Animal.java              # Clase abstracta base
+│   │   │   │   ├── Volador.java             # Interfaz
+│   │   │   │   ├── Mamifero.java
+│   │   │   │   ├── Ave.java
+│   │   │   │   ├── Reptil.java
+│   │   │   │   ├── Anfibio.java
+│   │   │   │   ├── Elefante.java
+│   │   │   │   ├── Perro.java
+│   │   │   │   ├── Paloma.java
+│   │   │   │   ├── Avestruz.java
+│   │   │   │   ├── Lagarto.java
+│   │   │   │   └── Rana.java
+│   │   │   │
+│   │   │   ├── service/                     # Servicios (lógica)
+│   │   │   └── utils/                        # Utilidades
+│   │   │
+│   │   └── resources/
+│   │       └── logback.xml                  # Configuración logging
+│   │
+│   └── test/
+│       └── java/com/animales/               # Tests unitarios
+│
+└── target/                                  # Archivos compilados

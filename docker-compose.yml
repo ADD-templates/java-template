@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  # Aplicación Java
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: animales-java-app
+    volumes:
+      # Montar código fuente
+      - .:/app
+      # Repositorio Maven persistente
+      - maven-repo:/home/developer/.m2/repository
+    # Mantener contenedor activo
+    tty: true
+    stdin_open: true
+    command: bash
+
+# Volúmenes persistentes
+volumes:
+  # Repositorio Maven local para este proyecto
+  maven-repo:
+    driver: local

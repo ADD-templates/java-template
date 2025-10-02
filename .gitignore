@@ -1,0 +1,35 @@
+# Ignorar archivos y carpetas generados por el sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de compilación y dependencias
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignorar configuraciones específicas del IDE
+/.idea/
+/*.iml
+/.vscode/
+/*.sublime-workspace
+
+# Ignorar carpetas de construcción
+/build/
+/target/
+/out/
+
+# Ignorar dependencias descargadas
+/.mvn/
+/.mvnw
+/.gradle/
+/.gradle/
+/node_modules/
+
+# Ignorar logs y archivos temporales
+*.log
+*.tmp
+
+# Ignorar archivos de configuración sensibles
+*.env
+*.properties
