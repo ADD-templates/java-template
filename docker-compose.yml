@@ -12,6 +12,17 @@ services:
       - .:/app
       # Repositorio Maven persistente
       - maven-repo:/home/developer/.m2/repository
+      # Para GUI - montar X11 socket (solo funciona en Linux/WSL)
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      # Alternativa para WSL: usar X11 forwarding
+      - /mnt/wslg/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+      # Para GUI en WSL2
+      - DISPLAY=${DISPLAY:-:0}
+      - WAYLAND_DISPLAY=${WAYLAND_DISPLAY:-wayland-0}
+      - XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-/tmp}
+      - PULSE_RUNTIME_PATH=${PULSE_RUNTIME_PATH:-/tmp/pulse}
+    network_mode: host
     # Mantener contenedor activo
     tty: true
     stdin_open: true

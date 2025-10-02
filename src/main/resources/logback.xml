@@ -10,7 +10,7 @@
 
     <!-- Configuración para logs en archivo -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/hola-java.log</file>
+        <file>logs/animales-java.log</file>
         
         <!-- Política de rotación de archivos -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">

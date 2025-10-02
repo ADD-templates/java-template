@@ -1,8 +1,10 @@
 package com.animales;
 
 import com.animales.model.*;
+import com.animales.gui.MainWindow;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import javax.swing.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,14 +17,27 @@ public class Main {
     
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
     private static final List<Animal> animales = new ArrayList<>();
-    private static final Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
     
     public static void main(String[] args) {
         logger.info("Iniciando aplicación Animales POO");
         
         // Crear algunos animales de ejemplo
         inicializarAnimales();
-        
+        if (args.length > 0 && "--gui".equals(args[0])) {
+            // Modo GUI
+            SwingUtilities.invokeLater(() -> new MainWindow());
+        } else {
+            // Modo consola...
+            ejecutarModoConsola();
+        }
+
+        scanner.close();
+        logger.info("Aplicación terminada");
+    }
+
+    private static void ejecutarModoConsola() {
+        // Lógica del modo consola aquí (si es necesario)
         boolean running = true;
         
         System.out.println("\n" +
@@ -74,8 +89,6 @@ public class Main {
             }
         }
         
-        scanner.close();
-        logger.info("Aplicación terminada");
     }
     
     private static void inicializarAnimales() {

@@ -1,9 +1,16 @@
 # Dockerfile para aplicación Java standalone con GUI
 FROM openjdk:17-jdk-slim
 
-# Instalar Maven
+# Instalar Maven Y bibliotecas para GUI
 RUN apt-get update && \
-    apt-get install -y maven && \
+    apt-get install -y \
+    maven \
+    libxext6 \
+    libxrender1 \
+    libxtst6 \
+    libxi6 \
+    xauth \
+    x11-apps && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
