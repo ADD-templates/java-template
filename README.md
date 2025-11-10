@@ -283,5 +283,5 @@ Este es un proyecto de práctica, siéntete libre de:
 ---
 
 **Versión**: 1.0.0  
-**Java**: 17 LTS  
+**Java**: 21 LTS  
 **Build Tool**: Maven 3.x
