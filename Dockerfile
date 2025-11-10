@@ -1,5 +1,5 @@
 # Dockerfile para aplicación Java standalone con GUI
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:21-jdk-jammy
 
 # Instalar Maven Y bibliotecas para GUI
 RUN apt-get update && \
