@@ -196,7 +196,7 @@ if (args.length > 0 && "--gui".equals(args[0])) {
 Necesitarás X11 forwarding (ya configurado en el Dockerfile):
 
 ```bash
-# En WSL con WSLg (Windows 11)
+# En WSL con WSLg (Windows 11), (debe hacerse ejecutado 'mvn clean package' previamente)
 java -jar target/animales-java-1.0.0.jar --gui
 
 # En WSL sin WSLg
